@@ -9,7 +9,7 @@ describe('testing linked list !', () => {
 
     it('test creating linked list !', () => {
         const ll = new LinkedList();
-        expect(ll).toBeInstanceOf(ll);
+        expect(ll).toBeInstanceOf(LinkedList);
         expect(ll).toBeDefined();
         expect(ll.head).toBeNull();
     });
