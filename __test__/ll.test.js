@@ -54,4 +54,18 @@ describe('testing linked list !', () => {
         expect(ll.head.next.next.next).toBeNull();
     
     });
+    it('test delete a node by its value from linked list', () => {
+        const ll = new LinkedList();
+        ll.append('fahad');
+        ll.append('ahmd');
+        ll.append('anas');
+        ll.append('faris');
+        console.log(ll.head);
+        ll.delete('faris');
+        console.log(ll.head);
+        expect(ll).toBeInstanceOf(LinkedList);
+        expect(ll.head.value).toEqual('fahad');
+        expect(ll.head.next.value).toEqual('ahmd');
+        expect(ll.head.next.next.value).toEqual('anas');
+    });
 });
