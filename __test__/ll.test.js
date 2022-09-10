@@ -61,11 +61,11 @@ describe('testing linked list !', () => {
         ll.append('anas');
         ll.append('faris');
         console.log(ll.head);
-        ll.delete('ahmd');
+        ll.delete('faris');
         console.log(ll.head);
         expect(ll).toBeInstanceOf(LinkedList);
         expect(ll.head.value).toEqual('fahad');
-        expect(ll.head.next.value).toEqual('anas');
-        expect(ll.head.next.next.value).toEqual('faris');
+        expect(ll.head.next.value).toEqual('ahmd');
+        expect(ll.head.next.next.value).toEqual('anas');
     });
 });
