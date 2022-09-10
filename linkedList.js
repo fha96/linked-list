@@ -55,6 +55,44 @@ class LinkedList {
             console.log('ll',this.head);
         }
     }
+
+    deleteMiddle(){
+        if(!this.head){
+            console.log('your list is already empty');
+        } else {
+            let tempPointer = this.head;
+            let mainPointer = this.head;
+            let newList = this.head;
+            let counter = 1;
+            while(tempPointer.next){
+                tempPointer = tempPointer.next;
+                counter ++;
+            }
+            if(counter%2 === 0 ){
+                for( let i = 1 ; i < counter/2 ; i++ ){
+                    mainPointer = mainPointer.next;
+                }
+                console.log("main pointer : ",mainPointer);
+            } else {    
+                let counter2 = parseInt(counter/2)+1;
+                console.log(counter2);
+                for(let i = 1;i < counter2; i++){
+                    mainPointer = mainPointer.next;
+                }
+                let holder = mainPointer.next;
+                console.log("main pointer : ",mainPointer);
+                console.log("holder : ",holder);
+                for(let i = 1; i< counter2-1;i++){
+                    newList = newList.next;
+                    
+                }
+                newList.next=holder;
+                
+                console.log("newList : ",newList.next);                
+                
+            }
+        }
+    }
     
 }
 const ll = {
