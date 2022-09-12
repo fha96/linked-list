@@ -84,4 +84,19 @@ describe('testing linked list !', () => {
         expect(ll.head.next.next.value).toEqual('faris');
         expect(ll.head.next.next.next.value).toEqual('abdullah');
     });
+
+    it('test insert at specific position ', () => {
+        const ll = new LinkedList();
+        ll.append('fahad');
+        ll.append('ahmd');
+        ll.append('anas');
+        console.log(ll.head);
+        ll.insertAt('faris',2);
+        console.log(ll.head);
+        expect(ll).toBeInstanceOf(LinkedList);
+        expect(ll.head.value).toEqual('fahad');
+        expect(ll.head.next.value).toEqual('faris');
+        expect(ll.head.next.next.value).toEqual('ahmd');
+        expect(ll.head.next.next.next.value).toEqual('anas');
+    });
 });
