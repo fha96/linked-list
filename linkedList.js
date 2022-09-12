@@ -93,6 +93,30 @@ class LinkedList {
             }
         }
     }
+
+    insertAt(value,position){
+        const node = new Node(value);
+        if(!this.head){
+            this.head = node;
+        } else {
+            let tempPointer = this.head;
+            let mainPointer = this.head;
+            for(let i = 1; i < position ; i++) {
+                tempPointer = tempPointer.next;
+            }
+            for(let i = 1; i < position-1 ; i++) {
+                mainPointer = mainPointer.next;
+            }
+            let holder = tempPointer;
+            console.log('tempPointer :' ,tempPointer);
+            node.next = holder;
+            console.log(' new Node : ', node);
+            mainPointer.next = node;
+            console.log(' new list : ', mainPointer);
+
+        }
+    }
+
     
 }
 const ll = {
