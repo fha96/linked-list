@@ -156,7 +156,32 @@ class LinkedList {
         }
     }
 
-    
+    getAndDeleteFirst() {
+        if(this.head) {
+            let first = this.head.value;
+            let tempPointer = this.head;
+            if(tempPointer.next){
+                this.head = tempPointer.next;
+            } else {
+                this.head = null ;
+            }
+            console.log('getFirst>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>',first);
+            return first;
+
+        } else {
+            console.log('Your Linkedlist is empty');
+        }
+    }
+
+    getFirst() {
+        if(this.head) {
+            let first = this.head.value;
+            return first;
+
+        } else {
+            console.log('Your Linkedlist is empty');
+        }
+    }
 }
 const ll = {
     head:{
