@@ -41,6 +41,7 @@ describe('Test Stack ', () => {
         stack.push('mhmd');
         let popped = stack.pop();
         popped = stack.pop();
+        expect(stack).toBeInstanceOf(Stack);
         expect(popped).toEqual('anas');
         expect(stack.peek()).toEqual('ahmd');
     });
