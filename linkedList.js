@@ -32,6 +32,25 @@ class LinkedList {
         }
     }
 
+    deleteLast() {
+        if(this.head){
+            let tempPointer = this.head;
+            let netPointer = this.head;
+            let counter = 1;
+            while(tempPointer.next){
+                tempPointer = tempPointer.next;
+                counter ++;
+            }
+            let tempPointer2 = this.head;
+            for(let i = 1; i < counter-1 ; i++){
+                tempPointer2 = tempPointer2.next;
+            }
+            tempPointer2.next = null;
+        } else {
+            console.log('Your Linked list is empty');
+        }
+    }
+
     delete(value){
         if(!this.head){
             console.log('your list is already empty');
@@ -91,6 +110,26 @@ class LinkedList {
                 console.log("newList : ",newList.next);                
                 
             }
+        }
+    }
+
+    getLast() {
+        if(this.head){
+            let tempPointer = this.head;
+            let counter = 1;
+            while(tempPointer.next){
+                tempPointer = tempPointer.next;
+                counter ++;
+            }
+            let tempPointer2 = this.head;
+            for(let i = 1; i < counter ; i++){
+                tempPointer2 = tempPointer2.next;
+            }
+            console.log(tempPointer2.value);
+            return tempPointer2.value;
+
+        } else {
+            console.log('Your Linked list is empty');
         }
     }
 
